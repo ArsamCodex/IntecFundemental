@@ -17,26 +17,25 @@ public class NatureApp {
         ForestNotebook noteBook = new ForestNotebook();
 
         // 5 PLANTEN TOEGEVOEGD
-        Tree TI = new Tree("Apple", 175);
+        Tree TI = new Tree("Apple", 275);
         TI.setLeafType(LeafType.HAND);
         noteBook.addPlant(TI);
 
-        Weed wI = new Weed("SantaMaria", 55);
+        Weed wI = new Weed("SantaMaria", 87);
         wI.setArea(1210);
         noteBook.addPlant(wI);
 
-        Flower fI = new Flower("Tulp", 40);
+        Flower fI = new Flower("Tulp", 42);
         fI.setSmell(Scent.PINEAPPLE);
         noteBook.addPlant(fI);
 
 
-        Bush bI = new Bush("Chenat", 7.5);
-        bI.setFruit("Not");
-        bI.getName();
+        Bush bI = new Bush("Chenat", 425);
+        bI.setFruit("Pear");
         bI.setLeafType(LeafType.HEART);
         noteBook.addPlant(bI);
 
-        Tree tII = new Tree("Kaj", 7000);
+        Tree tII = new Tree("SinasAppleSap", 452);
         tII.setLeafType(LeafType.SPEAR);
         noteBook.addPlant(tII);
 
@@ -55,29 +54,29 @@ public class NatureApp {
         II.setMaxFoodSize(150);
         noteBook.addAnimal(II);
 
-        Carnivore III = new Carnivore("Cat", 50, 700, 2150);
+        Carnivore III = new Carnivore("Cat", 50, 700, 210);
         III.setMaxFoodSize(750);
         noteBook.addAnimal(III);
 
 
-        Omnivore oI = new Omnivore("Vogel", 51, 30, 25);
+        Omnivore oI = new Omnivore("Vogel", 59, 30, 25);
         oI.setMaxFoodSize(20);
         oI.setPlantDiet(new HashSet<>(Arrays.asList(tII)));
         noteBook.addAnimal(oI);
 
 
-        Omnivore oII = new Omnivore("Girrafe", 10, 25, 17);
+        Omnivore oII = new Omnivore("Girrafe", 10, 205, 17);
         oII.setMaxFoodSize(155);
         oII.setPlantDiet(new HashSet<>(Arrays.asList(bI)));
         noteBook.addAnimal(oII);
 
-        Omnivore oIII = new Omnivore("Crow", 15, 20, 19);
+        Omnivore oIII = new Omnivore("Vlinder", 605, 70, 19);
         oIII.setMaxFoodSize(21);
         oIII.setPlantDiet(new HashSet<>(Arrays.asList(wI)));
         noteBook.addAnimal(oIII);
 
 
-        Herbivore hI = new Herbivore("Leopaad", 2000, 1540, 500);
+        Herbivore hI = new Herbivore("Leopaard", 200, 140, 500);
         hI.setPlantDiet(new HashSet<>(Arrays.asList(bI, fI)));
         noteBook.addAnimal(hI);
 
@@ -87,11 +86,11 @@ public class NatureApp {
         noteBook.addAnimal(hII);
 
 
-        Herbivore hVI = new Herbivore("Meer", 400, 950, 90);
+        Herbivore hVI = new Herbivore("Meer", 40, 90, 12);
         hVI.setPlantDiet(new HashSet<>(Arrays.asList(tII, TI)));
         noteBook.addAnimal(hVI);
 
-        Herbivore IV = new Herbivore("Meer", 700, 450, 640);
+        Herbivore IV = new Herbivore("Meer", 41, 450, 640);
         IV.setPlantDiet(new HashSet<>(Arrays.asList(tII, TI)));
         noteBook.addAnimal(IV);
 

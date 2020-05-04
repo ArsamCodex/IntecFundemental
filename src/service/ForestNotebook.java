@@ -97,7 +97,7 @@ public class ForestNotebook {
     public void sortPlantsByName() {
         List<Plant> pl = new ArrayList<>();
         pl.addAll(plants);
-        pl.sort(new ComparePlantByHeight());
+        pl.sort(new ComparePlantByName);
         System.out.println(pl);
 
     }

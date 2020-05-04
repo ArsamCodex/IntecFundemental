@@ -16,7 +16,7 @@ public class NatureApp {
 
         ForestNotebook noteBook = new ForestNotebook();
 
-
+        // 5 PLANTEN TOEGEVOEGD
         Tree TI = new Tree("Apple", 175);
         TI.setLeafType(LeafType.HAND);
         noteBook.addPlant(TI);
@@ -40,8 +40,8 @@ public class NatureApp {
         tII.setLeafType(LeafType.SPEAR);
         noteBook.addPlant(tII);
 
-        //JE KAN HIER ALLEN MAAR PLANTEN IJST PRINTEN
-    //  noteBook.printNotebook();
+        // JE KAN HIER ALLEN MAAR PLANTEN IJST PRINTEN MET NATURE VOLGOLRDE IK GA DEZE OM COMMENT ZETTEN
+       //noteBook.printNotebook();
 
         // 10 DIER TOEGEVOVEGD
         Carnivore I = new Carnivore("Lion", 50, 40, 450);
@@ -93,21 +93,21 @@ public class NatureApp {
         IV.setPlantDiet(new HashSet<Plant>(Arrays.asList(tII, TI)));
         noteBook.addAnimal(IV);
 
+        
+          // COUNTER
+        System.out.println("Tottal Planten : " + noteBook.getPlantCount());
+        System.out.println("Total Animal   : " + noteBook.getAnimalCount());
 
+        // HIER EXTRA BOUNUS METHOD GEMAKT OM PLANTEN EN DIEREN SORTEREN OP HEIGHT
         noteBook.printNotebook();
-        System.out.println(" NA SORTEER METHODE");
+        System.out.println("SORT ANIMAL BY NAME");
         noteBook.sortAnimalsByName();
         System.out.println(" SORT ANIMAL BY HEIGHT");
         noteBook.sortAnimalsByHeight();
-        System.out.println("Compare plants bye heihght");
+        System.out.println("SORT PLANT BY HEIGHT");
         noteBook.sortPlantByHeight();
-
-
-
-
-        // COUNTER
-        System.out.println("Tottal Planten : " + noteBook.getPlantCount());
-        System.out.println("Total Animal   : " + noteBook.getAnimalCount());
+        System.out.println("SORT PLAN BY NAME");
+        noteBook.sortPlantsByName();
 
 
     }

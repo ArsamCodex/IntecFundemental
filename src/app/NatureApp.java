@@ -14,38 +14,34 @@ public class NatureApp {
     public static void main (String [] args) {
 
 
-        ForestNotebook noteBook = new ForestNotebook();
+       ForestNotebook noteBook = new ForestNotebook();
 
-        // 5 PLANTEN TOEGEVOEGD
-        Tree TI = new Tree("Apple", 275);
+
+        Tree TI = new Tree("Apple", 175);
         TI.setLeafType(LeafType.HAND);
         noteBook.addPlant(TI);
 
-        Weed wI = new Weed("SantaMaria", 87);
+        Weed wI = new Weed("SantaMaria", 55);
         wI.setArea(1210);
         noteBook.addPlant(wI);
 
-        Flower fI = new Flower("Tulp", 42);
+        Flower fI = new Flower("Tulp", 40);
         fI.setSmell(Scent.PINEAPPLE);
         noteBook.addPlant(fI);
 
 
-        Bush bI = new Bush("Chenat", 425);
-        bI.setFruit("Pear");
+        Bush bI = new Bush("ANGEL", 7.5);
+        bI.setFruit("Not");
         bI.setLeafType(LeafType.HEART);
         noteBook.addPlant(bI);
 
-        Tree tII = new Tree("SinasAppleSap", 452);
+        Tree tII = new Tree("BANYAN", 7000);
         tII.setLeafType(LeafType.SPEAR);
         noteBook.addPlant(tII);
 
-        //JE KAN HIER ALLEN MAAR PLANTEN IJST PRINTEN
-        noteBook.printNotebook();
-        System.out.println();
-        noteBook.sortPlantsByName();
 
         // 10 DIER TOEGEVOVEGD
-        Carnivore I = new Carnivore("Lion", 50, 40, 450);
+        Carnivore I = new Carnivore("Lion", 50, 40, 775);
         I.setMaxFoodSize(6500);
         noteBook.addAnimal(I);
 
@@ -54,29 +50,29 @@ public class NatureApp {
         II.setMaxFoodSize(150);
         noteBook.addAnimal(II);
 
-        Carnivore III = new Carnivore("Cat", 50, 700, 210);
+        Carnivore III = new Carnivore("Cat", 50, 700, 557);
         III.setMaxFoodSize(750);
         noteBook.addAnimal(III);
 
 
-        Omnivore oI = new Omnivore("Vogel", 59, 30, 25);
+        Omnivore oI = new Omnivore("Vogel", 51, 30, 25);
         oI.setMaxFoodSize(20);
         oI.setPlantDiet(new HashSet<>(Arrays.asList(tII)));
         noteBook.addAnimal(oI);
 
 
-        Omnivore oII = new Omnivore("Girrafe", 10, 205, 17);
+        Omnivore oII = new Omnivore("Girrafe", 10, 25, 17);
         oII.setMaxFoodSize(155);
         oII.setPlantDiet(new HashSet<>(Arrays.asList(bI)));
         noteBook.addAnimal(oII);
 
-        Omnivore oIII = new Omnivore("Vlinder", 605, 70, 19);
+        Omnivore oIII = new Omnivore("DONKEY", 15, 20, 19);
         oIII.setMaxFoodSize(21);
         oIII.setPlantDiet(new HashSet<>(Arrays.asList(wI)));
         noteBook.addAnimal(oIII);
 
 
-        Herbivore hI = new Herbivore("Leopaard", 200, 140, 500);
+        Herbivore hI = new Herbivore("Leopaad", 2000, 1540, 557);
         hI.setPlantDiet(new HashSet<>(Arrays.asList(bI, fI)));
         noteBook.addAnimal(hI);
 
@@ -86,16 +82,22 @@ public class NatureApp {
         noteBook.addAnimal(hII);
 
 
-        Herbivore hVI = new Herbivore("Meer", 40, 90, 12);
+        Herbivore hVI = new Herbivore("Meer", 400, 950, 90);
         hVI.setPlantDiet(new HashSet<>(Arrays.asList(tII, TI)));
         noteBook.addAnimal(hVI);
 
-        Herbivore IV = new Herbivore("Meer", 41, 450, 640);
+        Herbivore IV = new Herbivore("Meer", 700, 450, 640);
         IV.setPlantDiet(new HashSet<>(Arrays.asList(tII, TI)));
         noteBook.addAnimal(IV);
 
-        
-          // COUNT ANIMALS EN PLANTS
+        // NATURE LIST ONSORTED
+        System.out.println("NATUUR UNSORTED LIST");
+        noteBook.printNotebook();
+
+        System.out.println("-------END OF NATUUR LIST----------");
+        // COUNT ANIMALS EN PLANTS
+        System.out.println("COUNTER TO COUNT PLANTS AND ANIMALS");
+        System.out.println();
         System.out.println("ANTAAL PLANTEN   : " + noteBook.getPlantCount());
         System.out.println("AANTAL ANIMALS   : " + noteBook.getAnimalCount());
 
@@ -115,8 +117,15 @@ public class NatureApp {
          noteBook.sortPlantByHeight();
 
 
+
+
+
+
+
+
     }
 
-
+  //END OF MAIN CLASS
+  // 557 
 
 }

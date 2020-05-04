@@ -31,15 +31,14 @@ public class Bush extends Plant {
 
     @Override
     public String toString() {
-         return "Bush{" +
-                " "+
-                "name = " +
+         return " { Bush    ->  {" +
+                "Name = " +
                 super.getName()+
-                ", " +
-                "Height = " +
+                "  "+
+                "Height = " + " "+
 
                 super.getHeight()+
-                " , " +
+                "  " +
                  "Frui = " + fruit +
 
                 ", leafType=" + leafType +

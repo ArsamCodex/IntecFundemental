@@ -40,8 +40,10 @@ public class NatureApp {
         tII.setLeafType(LeafType.SPEAR);
         noteBook.addPlant(tII);
 
-        // JE KAN HIER ALLEN MAAR PLANTEN IJST PRINTEN MET NATURE VOLGOLRDE IK GA DEZE OM COMMENT ZETTEN
-       //noteBook.printNotebook();
+        //JE KAN HIER ALLEN MAAR PLANTEN IJST PRINTEN
+        noteBook.printNotebook();
+        System.out.println();
+        noteBook.sortPlantsByName();
 
         // 10 DIER TOEGEVOVEGD
         Carnivore I = new Carnivore("Lion", 50, 40, 450);
@@ -60,54 +62,58 @@ public class NatureApp {
 
         Omnivore oI = new Omnivore("Vogel", 51, 30, 25);
         oI.setMaxFoodSize(20);
-        oI.setPlantDiet(new HashSet<Plant>(Arrays.asList(tII)));
+        oI.setPlantDiet(new HashSet<>(Arrays.asList(tII)));
         noteBook.addAnimal(oI);
 
 
         Omnivore oII = new Omnivore("Girrafe", 10, 25, 17);
         oII.setMaxFoodSize(155);
-        oII.setPlantDiet(new HashSet<Plant>(Arrays.asList(bI)));
+        oII.setPlantDiet(new HashSet<>(Arrays.asList(bI)));
         noteBook.addAnimal(oII);
 
         Omnivore oIII = new Omnivore("Crow", 15, 20, 19);
         oIII.setMaxFoodSize(21);
-        oIII.setPlantDiet(new HashSet<Plant>(Arrays.asList(wI)));
+        oIII.setPlantDiet(new HashSet<>(Arrays.asList(wI)));
         noteBook.addAnimal(oIII);
 
 
         Herbivore hI = new Herbivore("Leopaad", 2000, 1540, 500);
-        hI.setPlantDiet(new HashSet<Plant>(Arrays.asList(bI, fI)));
+        hI.setPlantDiet(new HashSet<>(Arrays.asList(bI, fI)));
         noteBook.addAnimal(hI);
 
 
         Herbivore hII = new Herbivore("Monkey", 510, 20, 300);
-        hII.setPlantDiet(new HashSet<Plant>(Arrays.asList(bI, TI)));
+        hII.setPlantDiet(new HashSet<>(Arrays.asList(bI, TI)));
         noteBook.addAnimal(hII);
 
 
         Herbivore hVI = new Herbivore("Meer", 400, 950, 90);
-        hVI.setPlantDiet(new HashSet<Plant>(Arrays.asList(tII, TI)));
+        hVI.setPlantDiet(new HashSet<>(Arrays.asList(tII, TI)));
         noteBook.addAnimal(hVI);
 
         Herbivore IV = new Herbivore("Meer", 700, 450, 640);
-        IV.setPlantDiet(new HashSet<Plant>(Arrays.asList(tII, TI)));
+        IV.setPlantDiet(new HashSet<>(Arrays.asList(tII, TI)));
         noteBook.addAnimal(IV);
 
         
-          // COUNTER
-        System.out.println("Tottal Planten : " + noteBook.getPlantCount());
-        System.out.println("Total Animal   : " + noteBook.getAnimalCount());
+          // COUNT ANIMALS EN PLANTS
+        System.out.println("ANTAAL PLANTEN   : " + noteBook.getPlantCount());
+        System.out.println("AANTAL ANIMALS   : " + noteBook.getAnimalCount());
 
-        // HIER EXTRA BOUNUS METHOD GEMAKT OM PLANTEN EN DIEREN SORTEREN OP HEIGHT
-        noteBook.printNotebook();
-        System.out.println("SORT ANIMAL BY NAME");
+       // noteBook.printNotebook();
+        System.out.println("--------- SORT ANIMALS BY NAME -------");
         noteBook.sortAnimalsByName();
-        System.out.println(" SORT ANIMAL BY HEIGHT");
+        System.out.println("------ SORT ANIMALS BY HEIGHT -------");
         noteBook.sortAnimalsByHeight();
-        System.out.println("SORT PLANT BY HEIGHT");
-        noteBook.sortPlantByHeight();
-        System.out.println("SORT PLAN BY NAME");
-        noteBook.sortPlantsByName();
+
+         System.out.println("--------- SORT PLANT BY NAME ---------");
+         System.out.println();
+         noteBook.sortPlantsByName();
+         System.out.println();
+
+         System.out.println("----- SORT PLANT BY HEIGHT--------");
+         System.out.println();
+         noteBook.sortPlantByHeight();
 
 
     }
